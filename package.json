@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
+    "beautiful": "prettier --single-quote --trailling-comma all --write 'src/**/*.{js,json,scss}'",
     "start": "nodemon --inspect src/index.js",
-    "watch" : "sass --embed-source-map --watch src/resources/scss/app.scss src/public/css/app.css",
+    "watch": "sass --embed-source-map --watch src/resources/scss/app.scss src/public/css/app.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,7 +29,10 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "nodemon": "^3.1.5",
+    "prettier": "^3.3.3",
     "sass": "^1.79.3"
   }
 }
